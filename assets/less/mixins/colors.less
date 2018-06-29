@@ -1,0 +1,208 @@
+.bg-color-variant(@bg-color: #555, @lt-percent: 10%, @lter-percent: 15%, @dk-percent: 10%, @dker-percent: 15%) {
+    background-color: @bg-color !important;
+    &.lt {
+        .bg-color-schema-important(@bg-color, -@lt-percent, -2.5%);
+    }
+    .lt {
+        .bg-color-schema(@bg-color, -@lt-percent, -2.5%);
+    }
+    &.lter {
+        .bg-color-schema-important(@bg-color, -@lter-percent, -5%);
+    }
+    .lter {
+        .bg-color-schema(@bg-color, -@lter-percent, -5%);
+    }
+    &.dk {
+        .bg-color-schema-important(@bg-color, @dk-percent, 2.5%);
+    }
+    .dk {
+        .bg-color-schema(@bg-color, @dk-percent, 2.5%);
+    }
+    &.dker {
+        .bg-color-schema-important(@bg-color, @dker-percent, 5%);
+    }
+    .dker {
+        .bg-color-schema(@bg-color, @dker-percent, 5%);
+    }
+    &.bg,
+    .bg {
+        background-color: @bg-color;
+    }
+    &.btn {
+        border-color: darken(@bg-color, 5%);
+    }
+    & .btn.o {
+        background-color: transparent;
+        color: #fff;
+        border-color: #fff;
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            color: @bg-color;
+            background-color: #fff;
+        }
+    }
+    &.btn.o {
+        background-color: transparent !important;
+        color: @bg-color !important;
+        border-color: @bg-color !important;
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            color: #fff !important;
+            background-color: @bg-color !important;
+        }
+    }
+}
+
+.bg-color-schema(@bg-color: #555, @percent: 15%, @sat-percent) {
+    background-color: saturate(darken(@bg-color, @percent), @sat-percent);
+}
+
+.bg-color-schema-important(@bg-color: #555, @percent: 15%, @sat-percent) {
+    background-color: saturate(darken(@bg-color, @percent), @sat-percent) !important;
+}
+
+.font-variant(@bg-color, @font-color, @link-color: #fff, @hover-color: #fff) {
+    color: @font-color !important;
+    a {
+        color: @link-color;
+        &:hover {
+            color: @hover-color;
+        }
+    }
+    &.o {
+        color: @bg-color;
+        background-image: none;
+        background-color: transparent;
+        border-color: @bg-color;
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            color: #fff;
+            background-color: @bg-color;
+            border-color: @bg-color;
+        }
+    }
+    &.btn {
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            color: @hover-color !important;
+            .bg-color-schema(@bg-color, -5%, 2.5%) !important;
+        }
+        &.disabled,
+        &[disabled],
+        fieldset[disabled] & {
+            &:hover,
+            &:focus,
+            &.focus {
+                color: @font-color;
+                background-color: @bg-color;
+            }
+        }
+    }
+    .badge {
+        color: @bg-color;
+        background-color: @font-color;
+    }
+    &.jlistMenu,
+    &.jlistMenu>.jlist-items {
+        >.jlist-item,
+        >.jlist-item-wrapper,
+        >.jlist-item-wrapper>.jlist-item,
+        >.jlist-item-wrapper>.jlist-children>.jlist-item-wrapper>.jlist-item {
+            color: darken(@link-color, 5%);
+            &:hover,
+            &:focus,
+            &:active,
+            &.jlist-item-selected {
+                color: @hover-color;
+                .bg-color-schema(@bg-color, -5%, 2.5%);
+            }
+        }
+    }
+    &.menu,
+    &.menu>ul {
+        >li {
+            >a {
+                color: darken(@link-color, 5%);
+                &:hover,
+                &:focus,
+                &:active,
+                &.active {
+                    color: @hover-color;
+                    .bg-color-schema(@bg-color, -5%, 2.5%);
+                }
+            }
+            >ul {
+                >li {
+                    >a {
+                        color: darken(@link-color, 5%);
+                        &:hover,
+                        &:focus,
+                        &:active,
+                        &.active {
+                            color: @hover-color;
+                            .bg-color-schema(@bg-color, -5%, 2.5%);
+                        }
+                    }
+                    >ul {
+                        >li {
+                            >a {
+                                color: darken(@link-color, 5%);
+                                &:hover,
+                                &:focus,
+                                &:active,
+                                &.active {
+                                    color: @hover-color;
+                                    .bg-color-schema(@bg-color, -5%, 2.5%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.menu-row,
+    &.menu-row>ul {
+        >li {
+            >a {
+                color: darken(@link-color, 5%);
+                &:hover,
+                &:focus,
+                &:active,
+                &.active {
+                    color: @hover-color;
+                    .bg-color-schema(@bg-color, -5%, 2.5%);
+                }
+            }
+        }
+    }
+    &.div.list>ul.hover,
+    &.ul.list.hover {
+        >li {
+            color: darken(@link-color, 5%);
+            &:hover,
+            &:focus,
+            &:active,
+            &.active {
+                .bg-color-schema(@bg-color, -5%, 2.5%);
+            }
+        }
+    }
+    .t-muted {
+        color: darken(@font-color, 10%) !important;
+    }
+    .t-light {
+        color: lighten(@font-color, 25%) !important;
+    }
+    .icon-muted {
+        color: darken(@font-color, 10%) !important;
+    }
+}

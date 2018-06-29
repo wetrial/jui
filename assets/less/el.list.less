@@ -1,0 +1,198 @@
+ul.list {
+    .list-unstyled();
+    margin: 0;
+    >li {
+        padding: 5px 0px;
+    }
+    &.loose {
+        >li {
+            padding: 10px 0px 10px;
+        }
+    }
+    &.tight {
+        >li {
+            padding: 2px 0px;
+        }
+    }
+    &.hover {
+        >li:hover {
+            background-color: #f5f5f5;
+        }
+    }
+    &.splitline {
+        >li {
+            .b-b();
+            padding: 8px 0px;
+        }
+        &.loose {
+            >li {
+                padding: 16px 0px 16px;
+            }
+        }
+        &.tight {
+            >li {
+                padding: 3px 0px;
+            }
+        }
+    }
+    &.outline {
+        >li {
+            padding: 10px 15px;
+            margin-bottom: -1px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+        &.loose {
+            >li {
+                padding: 20px 20px;
+            }
+        }
+        &.tight {
+            >li {
+                padding: 5px 10px;
+            }
+        }
+        &.space {
+            >li {
+                margin-bottom: 10px;
+            }
+            &.loose {
+                >li {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+ul.list-row {
+    display: table;
+    >li {
+        display: table-cell;
+        padding: 0 10px;
+        &.fit {
+            width: 3000px;
+        }
+    }
+    &.middle {
+        >li {
+            vertical-align: middle;
+        }
+    }
+    &.tight {
+        >li {
+            padding: 0 5px;
+        }
+    }
+    &.loose {
+        >li {
+            padding: 0 15px;
+        }
+    }
+    &.splitline {
+        >li {
+            .b-l();
+            border-bottom: none;
+            &:first-child {
+                border-left: none;
+            }
+        }
+    }
+    &.outline {
+        >li {
+            padding: 8px;
+            .b-t();
+            .b-b();
+            .b-r();
+            border-left: none;
+            &:first-child {
+                .b-l();
+            }
+            text-align: center;
+            vertical-align: middle;
+        }
+        &.tight {
+            >li {
+                padding: 5 5px;
+            }
+        }
+        &.loose {
+            >li {
+                padding: 10px 15px;
+            }
+        }
+    }
+    &.justify {
+        >li {
+            width: 1%;
+            text-align: center;
+        }
+    }
+}
+
+ul.list-inline {
+    .list-unstyled();
+    margin: 0 -10px;
+    display: inline-block;
+    >li {
+        display: inline-block;
+        padding: 0 10px;
+    }
+    &.justify {
+        display: block;
+        text-align: justify;
+    }
+    &.space {
+        >li {
+            margin-bottom: 15px;
+        }
+    }
+    &.tight {
+        margin: 0 -5px;
+        >li {
+            padding: 0 5px;
+        }
+        &.space {
+            >li {
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+    &.tighter {
+        margin: 0 -3px;
+        >li {
+            padding: 0 3px;
+        }
+        &.space {
+            >li {
+                margin-top: 2px;
+                margin-bottom: 2px;
+            }
+        }
+    }
+    &.loose {
+        margin-left: -15px;
+        >li {
+            padding: 0 15px;
+        }
+        &.space {
+            >li {
+                margin-bottom: 15px;
+            }
+        }
+    }
+    &.looser {
+        >li {
+            margin-right: 30px
+        }
+        &.space {
+            >li {
+                margin-bottom: 15px;
+            }
+        }
+    }
+    &.pills {
+        margin: 0;
+    }
+}

@@ -1,0 +1,43 @@
+﻿.jlayer-close {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: pointer;
+    opacity: .5;
+    font-size: 22px;
+
+    &:before {
+        content: "\2715";
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.jlayer-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+    text-align: center;
+    overflow-y: auto;
+
+    &:after {
+        content: ' ';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    > .jlayer {
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+    }
+}

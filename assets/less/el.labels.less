@@ -1,0 +1,51 @@
+//
+// Labels
+// --------------------------------------------------
+
+//** Default label text color
+@badge-color:                 #fff;
+//** Default text color of a linked label
+@badge-link-hover-color:      #fff;
+
+.badge {
+  display: inline-block;
+  padding: .25em .5em;
+  font-size: 75%;
+  line-height: 1;
+  vertical-align: baseline;
+  font-weight: 700;
+  background-color: rgba(120,130,140,.6);
+  border-radius: .2rem;
+
+  // Add hover effects, but only for links
+  a& {
+    &:hover,
+    &:focus {
+      color: @badge-link-hover-color;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  // Quick fix for labels in buttons
+  .btn & {
+    position: relative;
+    top: -1px;
+  }
+}
+
+.badge-lg {
+  font-size: 1.33rem;
+  padding: 5px 9px
+}
+
+.badge-sm {
+  padding: .15em .35em
+}
+
+.badge-xs {
+  padding: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px
+}

@@ -1,0 +1,27 @@
+{
+  "name": "jui",
+  "version": "1.0.0",
+  "description": "www.wetrial.com 微试云临床试验平台前端框架",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wetrial/jui.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wetrial/jui/issues"
+  },
+  "homepage": "https://github.com/wetrial/jui#readme",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-contrib-requirejs": "^1.0.0",
+    "grunt-contrib-uglify": "^3.3.0"
+  }
+}

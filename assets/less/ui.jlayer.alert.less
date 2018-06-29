@@ -1,0 +1,78 @@
+.jalert {
+    position: relative;
+    padding: 15px 30px 15px 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+    background: #fff;
+    display: block;
+
+    > .jalert-content-wrapper {
+
+        display: table;
+        
+        > .jalert-icon, > .jalert-content{
+            vertical-align: top;
+        }
+
+        .jalert-icon {
+            display: table-cell;
+            
+            i {
+                width: 48px;
+                text-align: center;
+                font-size: 42px;
+            }
+        }
+
+        > .jalert-content {
+            padding-left: 12px;
+            display: table-cell;
+            width: 3000px;
+            > .jalert-message{
+                padding-top: 10px;
+                font-size: 16px;
+                font-weight: 700;
+            }
+            > .jalert-description {
+                padding-top: 5px;
+
+                ul {
+                    padding-left: 16px;
+                }
+            }
+        }       
+    }
+
+    > .jalert-commands{
+        display: block;
+        text-align: right;
+        margin-top: 20px;
+    }
+    
+}
+
+.jalert-close {
+    position: absolute;
+    top:18px;
+    right:15px;
+}
+
+.jalert-info .jalert-icon i {
+    color: @brand-info;
+}
+
+.jalert-success .jalert-icon i {
+    color: @brand-success;
+}
+
+.jalert-error .jalert-icon i {
+    color: @brand-danger;
+}
+
+.jalert-warning .jalert-icon i {
+    color: @brand-warning;
+}
+
+.jalert-confirm .jalert-icon i {
+    color: @brand-warning;
+}

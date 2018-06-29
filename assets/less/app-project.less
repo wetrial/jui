@@ -1,0 +1,324 @@
+@import (reference) "jui.less";
+
+.main-nav {
+    width: 70px;
+
+    .main-nav-hd {
+        .cell();
+        .t-center();
+    }
+}
+
+.main-menu {
+    .jlist-item {
+        text-align: center;
+        padding: 5px 15px;
+
+        i {
+            display: block;
+            font-size: 16px;
+            margin: 6px auto;
+        }
+    }
+}
+
+.subnav {
+    .subnav-hd {
+        height: 50px;
+
+        .subnav-hd-title {
+            .p-x-md();
+            font-size: 18px;
+        }
+    }
+}
+
+.content-hd {
+    height: 50px;
+    background-color: #fafafa;
+    .p-x-md();
+
+    .content-hd-title {
+        font-size: 18px;
+    }
+}
+
+.content-bd {
+    padding: 10px 15px;
+}
+
+
+/*头像*/
+.avatar {
+  position: relative;
+  display: block;
+  border-radius: 500px;
+  white-space: nowrap;
+  background: #797fb4;
+  color: #fff; 
+}
+.avatar img {
+  border-radius: 500px;
+  width: 100%;
+}
+
+.avatar-text {  width:40px; height: 40px; line-height: 40px; text-align: center; display: block; font-size: 12px;  }
+.avatar.thumb-xs > .avatar-text { width:30px; height: 30px; line-height: 30px; }
+
+
+/*缩略图*/
+.thumb-lg {
+  width: 128px;
+  display: inline-block;
+}
+.thumb-md {
+  width: 64px;
+  display: inline-block;
+}
+.thumb {
+  width: 50px;
+  display: inline-block;
+}
+.thumb-sm {
+  width: 40px;
+  display: inline-block;
+}
+.thumb-xs {
+  width: 30px;
+  display: inline-block;
+}
+.thumb-wrapper {
+  padding: 2px;
+  border: 1px solid #dbe2e7;
+}
+.thumb img,
+.thumb-xs img,
+.thumb-sm img,
+.thumb-md img,
+.thumb-lg img,
+.thumb-btn img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+.img-full {
+  width: 100%;
+}
+.img-full img {
+  width: 100%;
+}
+
+
+
+/*右侧弹窗*/
+.slide-view {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 680px;
+    border-left: solid 1px #e8edf3;
+    -webkit-box-shadow: 0 0 15px rgba(0,0,0,.1);
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+}
+
+
+
+/*loading效果*/
+
+@-moz-keyframes bounceDelay {
+    0%,100%,80% {
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    40% {
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes bounceDelay {
+    0%,100%,80% {
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    40% {
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes bounceDelay {
+    0%,100%,80% {
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    40% {
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.page-spinner-bar {
+    position: absolute;
+    z-index: 2200;
+    width: 100px;
+    top: 40%;
+    left: 50%;
+    margin-left: -55px;
+    text-align: center;
+}
+
+.page-spinner-bar > div {
+    background: #4bccd8;
+    border-radius: 100% !important;
+    display: inline-block;
+    margin: 0 5px;
+    width: 18px;
+    height: 18px;
+    -webkit-animation: bounceDelay 1.4s infinite ease-in-out;
+    -moz-animation: bounceDelay 1.4s infinite ease-in-out;
+    -o-animation: bounceDelay 1.4s infinite ease-in-out;
+    animation: bounceDelay 1.4s infinite ease-in-out;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.page-spinner-bar .bounce1 {
+    -webkit-animation-delay: -.32s;
+    -moz-animation-delay: -.32s;
+    -o-animation-delay: -.32s;
+    animation-delay: -.32s;
+}
+
+.page-spinner-bar .bounce2 {
+    -webkit-animation-delay: -.16s;
+    -moz-animation-delay: -.16s;
+    -o-animation-delay: -.16s;
+    animation-delay: -.16s;
+}
+
+
+/*勾选框样式*/
+.i-checkbox {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #CBD5DD;
+    background-color: #FFF;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+    position: relative;
+    font-size: 12px;
+    font-family:"FontAwesome";
+    font-style:normal;
+    cursor:pointer;
+    text-align:center;
+    color:#fff;
+}
+.i-checkbox > i:before {
+    content:"\f00c";
+    font-style:normal;
+}
+.i-checkbox.on {
+    background:@brand-success;
+    border-color:@brand-success;
+}
+.i-checkbox.half {
+    color:@brand-success;
+    background:#f2f2f2;
+}
+.i-checkbox.half > i:before {
+    content:"\f04d";
+}
+
+/*卡片式视图*/
+
+.cardview-main {
+    clear: both;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cardview-main > li {
+    display: inline-block;
+    width: 300px;
+    margin-right: 20px;
+}
+
+.cardview-sub {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cardview-sub > li {
+    .b;
+    .r-md;
+    clear: both;
+    background: #fff;
+    padding: 10px;
+    margin: 5px;
+}
+
+.cardview-sub .cardview-info {
+    display: inline-block;
+    width: 230px;
+}
+
+.cardview-sub .cardview-avatar {
+    display: inline-block;
+    text-align: right;
+}
+
+/*任务列表视图*/
+
+.mytask-listview {
+    > li {
+        a,a:focus {
+            .t-ell;
+            .p-t-md;
+            .p-b-md;
+            color: #aaa;
+            text-decoration:none;
+        } 
+         ul.jlist-children {
+            
+            list-style:none;
+            > li {
+                .b-b;
+                .p-t-md;
+                .p-b-md;
+                a {
+                    color:#333;
+                    .p-a-0;
+                }
+            }
+
+        }
+        
+    }
+}

@@ -1,0 +1,81 @@
+// Alignment
+.t-left {
+    text-align: left;
+}
+
+.t-right {
+    text-align: right;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.t-justify {
+    text-align: justify;
+}
+
+.t-nowrap {
+    white-space: nowrap;
+}
+
+.t-ell {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// Transformation
+.t-lowercase {
+    text-transform: lowercase;
+}
+
+.t-uppercase {
+    text-transform: uppercase;
+}
+
+.t-capitalize {
+    text-transform: capitalize;
+}
+
+// Contextual colors
+.t-muted {
+    color: @text-muted;
+}
+
+.t-primary {
+    .text-emphasis-variant(@brand-primary) !important;
+}
+
+.t-success {
+    .text-emphasis-variant(@state-success-text) !important;
+}
+
+.t-info {
+    .text-emphasis-variant(@state-info-text) !important;
+}
+
+.t-warning {
+    .text-emphasis-variant(@state-warning-text) !important;
+}
+
+.t-danger {
+    .text-emphasis-variant(@state-danger-text) !important;
+}
+
+.t-lg {
+    font-size: 18px !important;
+}
+
+.initialism {
+    font-size: 90%;
+    .t-uppercase();
+}
+
+.lh-lg {
+    line-height: 1.75;
+}
+
+span.required {
+    color: red;
+}

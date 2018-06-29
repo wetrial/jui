@@ -1,0 +1,77 @@
+.box {
+    margin: 0 0 20px;
+    padding: 0;
+
+    > .box-bd {
+        padding: 15px 0;
+    }
+}
+
+.cardbox {
+    margin: 0 0 20px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 4px;
+
+    > .box-hd {
+        padding: 0 10px;
+        margin-bottom: 0;
+        background-color: #f7f7f9;
+        border-bottom: 1px solid rgba(0,0,0,.125);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+
+    > .box-bd {
+        padding: 15px;
+    }
+
+    > .box-ft {
+        padding: 0 10px;
+        margin-bottom: 0;
+        background-color: #f7f7f9;
+        border-top: 1px solid rgba(0,0,0,.125);
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+}
+
+.hover-box {
+    position: relative;
+
+    > .hover-item {
+        display: none !important;
+
+        &.hover-down {
+            position: absolute;
+            top: 100%;
+        }
+
+        &.abs {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            &.b-r {
+                top: auto;
+                left: auto;
+            }
+        }
+    }
+
+    > .hover-visible {
+        visibility: hidden;
+    }
+}
+
+.hover-item.active,
+.hover-box:hover > .hover-item {
+    display: block !important;
+}
+
+.hover-item.active,
+.hover-box:hover > .hover-visible {
+    visibility: visible;
+}

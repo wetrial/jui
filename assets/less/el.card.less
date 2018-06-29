@@ -1,0 +1,71 @@
+.card {
+    border: 1px solid #D1D7DC;
+    >.card-img {
+        >img {
+            width: 100%;
+        }
+    }
+    >.card-hd {
+        padding: 10px 15px;
+        margin-bottom: 0;
+        background-color: rgba(0,0,0,.03);
+        border-bottom: 1px solid rgba(0,0,0,.125);
+    }
+    >.card-bd {
+        padding: 15px;
+    }
+}
+
+.hcard {
+    // Proper spacing between instances of .hcard
+    margin-top: 15px;
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+.hcard,
+.hcard-bd {
+    zoom: 1;
+    overflow: hidden;
+}
+
+.hcard-bd {
+    width: 10000px;
+}
+
+.hcard-img {
+    display: block; // Fix collapse in webkit from max-width: 100% and display: table-cell.
+    &.img-thumbnail {
+        max-width: none;
+    }
+}
+
+.hcard-ft {
+    padding-left: 10px;
+    white-space: nowrap;
+}
+
+.hcard-hd {
+    padding-right: 10px;
+    white-space: nowrap;
+}
+
+.hcard-hd,
+.hcard-ft,
+.hcard-bd,
+.hcard-col {
+    display: table-cell;
+    vertical-align: top;
+}
+
+@media (max-width: 768px) {
+    .hcard-ft {
+        display: block;
+    }
+}
+
+.hcard-heading {
+    margin-top: 0;
+    margin-bottom: 5px;
+}

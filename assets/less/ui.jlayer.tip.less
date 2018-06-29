@@ -1,0 +1,81 @@
+.jtip {
+    display: table;
+    margin-bottom: 21px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #fff;
+
+    .jtip-inner{    
+       
+        display: table-row;
+
+        > div{
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .jtip-icon {      
+            i {
+                padding: 6px;
+                width: 30px;
+                text-align: center;
+                font-size: 16px;
+            }
+        }
+
+        > .jtip-message{
+            padding: 6px;
+        }   
+    }
+
+    
+}
+
+.jtip-full{
+    > .jtip-inner{
+        > .jtip-message{
+            width: 3000px;
+        }
+    }
+}
+
+.jtip-info {
+        background-color: #f5fbfe;
+        border-color: #30b2f2;
+
+        > .jtip-inner > .jtip-icon i {
+            color: @brand-info;
+        }
+    }
+
+    .jtip-success {
+        background-color: #f4fcf5;
+        border-color: #1dbf38;
+
+        > .jtip-inner > .jtip-icon i {
+            color: @brand-success;
+        }
+    }
+
+    .jtip-warning {
+        background-color: #fff9f2;
+        border-color: #ff9000;
+
+        > .jtip-inner > .jtip-icon i {
+            color: @brand-warning;
+        }
+    }
+
+    .jtip-error {
+        background-color: #fff7f7;
+        border-color: #ff5959;
+
+        > .jtip-inner > .jtip-icon i {
+            color: @brand-danger;
+        }
+    }
+
+    .jtip-nobg{
+        background-color: transparent;
+        border-color: transparent;
+    }

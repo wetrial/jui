@@ -1,0 +1,96 @@
+@modal-lg: 900px;
+@modal-md: 680px;
+@modal-sm: 360px;
+
+.modal {
+    position: relative;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+
+    .modal-hd {
+        height: 50px;
+        padding: 0 15px;
+        border-bottom: 1px solid #e5e5e5;
+        h4 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .modal-bd {
+        overflow-y: auto;
+        position: relative;
+        padding: 15px;
+        >form:first-child {
+            margin-top: 20px;
+        }
+    }
+
+    .modal-ft {
+        padding: 15px;
+        text-align: right;
+        border-top: 1px solid #e5e5e5;
+        // Properly space out buttons
+        .btn + .btn {
+            margin-left: 5px;
+            margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
+        }
+        // but override that for button groups
+        .btn-group .btn + .btn {
+            margin-left: -1px;
+        }
+        // and override it for block buttons as well
+        .btn-block + .btn-block {
+            margin-left: 0;
+        }
+    }
+}
+
+// Scale up the modal
+@media (min-width: @screen-sm-min) {
+    // Automatically set modal's width for larger viewports
+    .modal {
+        width: @modal-md;
+        margin: 0px auto;
+        .modal-hd {
+            h4 {
+                max-width:600px;
+            }
+        }
+    }
+
+    // Modal sizes
+    .modal-sm {
+        width: @modal-sm;
+        .modal-hd {
+            h4 {
+                max-width:280px;
+            }
+        }
+    }
+}
+
+@media (min-width: @screen-md-min) {
+    .modal-lg {
+        width: @modal-lg;
+        .modal-hd {
+            h4 {
+                max-width:800px;
+            }
+        }
+    }
+}
+
+
+.modal-full{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}

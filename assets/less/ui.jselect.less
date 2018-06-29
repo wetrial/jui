@@ -1,0 +1,132 @@
+.jselect-select {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+}
+
+/*.jselect .input-wrapper {
+    display: inline-block;
+    width: 220px;
+    vertical-align: middle;
+
+     &:after {
+        content: ' ';
+    }
+}*/
+
+.jselect.jselect-default .jselect-display {
+    position: relative;
+    background: white;
+    border: 1px solid gainsboro;
+    border-radius: 2px;
+    line-height: 1.42857;
+    padding: 6px 24px 6px 12px;
+    cursor: pointer;
+    min-height: 34px;
+    color:#000 !important;
+
+    .jselect-display-single {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .jselect-display-arrow {
+        position: absolute;        
+        top: 50%;
+        bottom: 0;
+        right: 8px;        
+        margin-top: -7px;
+        line-height: 1;
+    }   
+}
+
+.jselect.jselect-plain .jselect-display {
+    display: inline-block;
+    line-height: 1.42857;
+    padding: 6px;
+    cursor: pointer;
+
+    .jselect-display-single {
+        display: inline-block;
+    }
+
+    .jselect-display-arrow {
+        display: inline-block;
+    }
+}
+
+.jinput.jselect.jinput-invalid .jselect-display {
+    border-color: #ffa8a8;
+    background-color: #fff3f3;
+}
+
+.jselect .jselect-display-multiple {
+    .jlist-items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        .jlist-item {
+            display: inline-block;
+            margin-right: 9px;
+        }
+    }
+
+    .jlist-empty {
+        color: gray;
+        margin-right: 9px;
+    }
+}
+
+.jselect-pop {
+    display: none;
+    border: 1px solid #000;
+    background: #fff;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    -webkit-background-clip: padding-box;
+    padding: 6px 0;
+    list-style: none;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.2);
+}
+
+.jselect-list {
+    position: relative;
+    overflow-y: auto;
+
+    .jlist-items {
+        .jlist-item {
+            .jlist-item-checker {
+                visibility: hidden;
+            }
+        }
+
+        .jlist-item-selected {
+            .jlist-item-checker {
+                visibility: visible;
+
+                &:before {
+                    content: "\f00c";
+                }
+            }
+        }
+    }
+}
+
+.jselect-search {
+    display: none;
+    padding: 5px;
+
+    .jselect-search-input {
+        width: 100%;
+    }
+}

@@ -1,0 +1,82 @@
+    .jlist-item-toggle,
+    .jlist-item-checker,
+    .jlist-checker-all,
+    .jlist-tree-icon {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        vertical-align: middle;
+    }
+
+    .jlist-item-toggle:before {
+        content: "\f106";
+    }
+
+    .jlist-item-collapsed .jlist-item-toggle:before {
+        content: "\f107";
+    }
+
+    .jlist-item-leaf .jlist-item-toggle {
+        //display: none;
+        &:before{
+            content: "";
+        }
+    }
+
+    .jlist-checker-all:before,
+    .jlist-item-checker:before {
+        content: "\f096";
+    }
+
+    .jlist-checker-all-checked:before,
+    .jlist-item-selected .jlist-item-checker:before {
+        content: "\f046";
+    }
+
+    .jlist-item-partselected .jlist-item-checker:before {
+        content: "\f14a";
+    }
+
+    .jlist-tree-icon:before {
+        color: #F1C40F;
+        content: "\f07c";
+    }
+
+    .jlist-item-leaf .jlist-tree-icon:before,
+    .jlist-item-collapsed .jlist-tree-icon:before {
+        color: #F1C40F;
+        content: "\f07b";
+    }
+
+    .jlist-item-disabled{
+        color: #777;
+
+        &:hover{
+            text-decoration: none;
+            cursor: not-allowed;
+            background-color: transparent;
+            background-image: none;
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+        }
+    }
+
+
+    .grid.row {
+        >div {
+            margin-bottom: 15px;
+        }
+    }
+
+    .row-outline {
+        border-left: 1px solid rgba(0, 0, 0, 0.125);
+        border-top: 1px solid rgba(0, 0, 0, 0.125);
+        .clearfix();
+        >div {
+            text-align: center;
+            border-right: 1px solid rgba(0, 0, 0, 0.125);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        }
+    }
