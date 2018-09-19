@@ -2139,6 +2139,13 @@ if (typeof define === 'function') {
             viewModelFile = viewModelFile.prepend('/');
 
             require(['text!' + viewFile], function (tpl) {
+                //如果有配置多语言的格式化方法 则处理多语言的格式
+                if($.jui.template.helpers._formatLanguage){
+                    tpl=tpl.replace(/\{\{'.+?'\s+\|\s*_formatLanguage.*?\}\}/gi,function(match){
+                        return $.jui.tmpl(match);
+                    })
+                }
+                                
                 var $tpl = $(tpl);
                 $tpl.attr('view', rawUrl);
                 that.element.html($tpl);
