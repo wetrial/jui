@@ -6,7 +6,7 @@
         paths: {
             "jquery": "jquery-1.11.3",
             "jqueryui": "jquery-ui",
-            "juiall": "jui/jui",
+            "juiall": "jui/juiall",
             "jquerydatepicker": "i18n/datepicker-zh-CN",
             "slimscroll": "jquery.slimscroll.min",
             "mock": "mock"
@@ -26,5 +26,9 @@
 
         $.router.start(config);
 
+        //多语言格式化方法
+        $.jui.template.helper('_formatLanguage', function (content,local) {
+            return content+'-'+(local||'');
+        });
     });
 })(window);
