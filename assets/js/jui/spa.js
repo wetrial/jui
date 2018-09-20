@@ -195,7 +195,18 @@
                 //如果有配置多语言的格式化方法 则处理多语言的格式
                 if($.jui.template.helpers._formatLanguage){
                     tpl=tpl.replace(/\{\{'.+?'\s+\|\s*_formatLanguage.*?\}\}/gi,function(match){
-                        return $.jui.tmpl(match);
+                        var key="";
+                        var local=undefined;
+                        if(/'(.+?)'\s*\|/.test(match)){
+                            key=RegExp.$1;
+                        }
+                        if(/_formatLanguage:'(.+?)'/.test(match)) 
+                        {
+                            local=RegExp.$1;
+                        }
+                        return $.jui.template.helpers._formatLanguage(key,local);
+                        //模板编译的时候 会以空格去split 导致编译的内容有问题 这里只能手动处理
+                        //return $.jui.tmpl(match);
                     })
                 }
                                 
